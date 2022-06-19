@@ -15,7 +15,8 @@ const connect = function () {
     console.log('Successfully connected to game server');
     conn.write("Name: SAB");
 
-  });
+    });
+  
 
   conn.on("end", () => {
     console.log('thanks for playing');
