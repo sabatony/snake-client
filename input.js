@@ -1,3 +1,5 @@
+const { MESSAGES } = require("./constants");
+
 let connection;
 // setup interface to handle user input from stdin
 const handleUserInput = function (key) {
@@ -16,11 +18,8 @@ const handleUserInput = function (key) {
   if (key === 'd') {
     connection.write('Move: right');
   }
-  if (key === '1') {
-    connection.write('Say: yum')
-  }
-  if (key === '2') {
-    connection.write('Say: =)')
+  if (MESSAGES[key]) {
+    connection.write(MESSAGES[key]);
   }
 
 };
